@@ -10,7 +10,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Profile = () => {
   return (
     <div
-      className="relative w-[450px] h-[600px] bg-[url('../../assets/images/profile.jpg')] bg-cover bg-center rounded-3xl overflow-hidden transform rotate-y-12 hover:rotate-y-6 transition-transform duration-500"
+      className="relative w-[450px] h-[600px] bg-[url('../../assets/images/profile.jpg')] bg-cover bg-center rounded-3xl overflow-hidden"
       style={{ transform: "perspective(1000px) rotateY(10deg) rotateX(5deg)" }}
     >
       <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md pb-8">

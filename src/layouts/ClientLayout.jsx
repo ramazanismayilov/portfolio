@@ -3,17 +3,17 @@ import { Outlet } from "react-router";
 import Profile from "../components/layout/Profile";
 import BackgroundCanvas from "../components/common/BackgroundCanvas";
 
-export const ClientLayout = () => {
+const ClientLayout = () => {
   return (
-    <div className="relative min-h-screen bg-black">
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       <BackgroundCanvas />
-      <div className="relative z-10 flex items-center justify-center min-h-screen p-10">
-        <div className="flex items-center gap-6">
-          <ClientSidebar />
-          <Profile />
-          <main className="flex-[2]">
+      <div className="relative z-10">
+        <ClientSidebar />
+        <div className="pl-32 pr-8 py-8">
+          <div className="flex items-start min-h-screen">
+            <Profile />
             <Outlet />
-          </main>
+          </div>
         </div>
       </div>
     </div>
