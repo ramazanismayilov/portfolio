@@ -1,52 +1,93 @@
-import React from 'react'
-
 const About = () => {
   return (
-        <div className="flex-1 pl-8">
+    <div
+      className="bg-gradient-to-r from-[#15191C] via-[#202527] to-[#292a2a] min-h-screen rounded-4xl overflow-hidden"
+      style={{ transform: "perspective(5000px) rotateY(10deg)" }}
+    >
       <div className="max-w-4xl">
-        <div className="mb-8">
-          <span className="text-green-400 font-medium text-sm uppercase tracking-wide">
-            Blog Post
-          </span>
-          <h1 className="text-4xl font-bold text-white mt-2 mb-4">
-            Data Center Infrastructure
-          </h1>
-          <div className="flex items-center gap-4 text-gray-400 text-sm">
-            <span>APRIL 28, 2020</span>
-            <span>•</span>
-            <span className="text-green-400">CODE</span>
-            <span>•</span>
-            <span>BY OLEKSANDR</span>
+        <div className="border-b w-full border-white/20 backdrop-blur-sm p-5">
+          <h5 className="text-[#fefefe] text-[21px] tracking-wider">
+            <span className="text-green-400">A</span>bout Me
+          </h5>
+        </div>
+        <div className="flex justify-between gap-11 p-5">
+          <p className="text-[#CECECE] w-1/2">
+            Hey, there 👋 I'm Benjamin, a Software developer and Data scientist
+            with over 8+ years of experience, specialising in Java and React.
+            Also I proficient at using tools and programming languages such as
+            Python or SQL to manipulate and analyze data.
+          </p>
+          <div className="w-1/2">
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6">
+              <div className="flex items-center mb-4">
+                <span className="bg-green-500 text-black px-3 py-1 rounded text-sm font-medium">
+                  Location:
+                </span>
+                <span className="text-white ml-4">Los Angeles, USA</span>
+              </div>
+              <div className="flex items-center mb-4">
+                <span className="bg-green-500 text-black px-3 py-1 rounded text-sm font-medium">
+                  Languages:
+                </span>
+                <span className="text-white ml-4">English, German</span>
+              </div>
+              <div className="flex items-center mb-4">
+                <span className="bg-green-500 text-black px-3 py-1 rounded text-sm font-medium">
+                  Skills:
+                </span>
+              </div>
+              <div className="grid grid-cols-5 gap-3 mt-4">
+                {["⚛", "A", "↓", "🐍", "🌿", "A", "JS", "DB", "V", "PHP"].map(
+                  (skill, idx) => (
+                    <div
+                      key={idx}
+                      className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center"
+                    >
+                      <span className="text-black font-bold">{skill}</span>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
           </div>
+          <p></p>
         </div>
-        <div className="relative w-full h-[400px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden mb-8">
-          <img
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop"
-            alt="Data Center Infrastructure"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-white mb-2">
+            <span className="text-green-400">M</span>y Services
+          </h2>
         </div>
-        <div className="prose prose-lg prose-invert max-w-none">
-          <p className="text-gray-300 leading-relaxed text-lg mb-6">
-            Modern data centers are the backbone of our digital infrastructure,
-            requiring sophisticated planning and implementation to ensure
-            optimal performance and reliability.
-          </p>
-          <p className="text-gray-300 leading-relaxed text-lg mb-6">
-            From power distribution to cooling systems, every component must
-            work in harmony to support the ever-growing demands of cloud
-            computing and digital services.
-          </p>
-          <p className="text-gray-300 leading-relaxed text-lg">
-            In this comprehensive guide, we'll explore the key elements that
-            make up a successful data center infrastructure and the best
-            practices for implementation.
-          </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6">
+            <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-black font-bold text-xl">⚡</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              App Development
+            </h3>
+            <p className="text-gray-400 leading-relaxed">
+              End-to-end organization, ui/ux design, and development of
+              applications using modern frameworks and best practices.
+            </p>
+          </div>
+
+          <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6">
+            <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-black font-bold text-xl">📊</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              Data Scientist
+            </h3>
+            <p className="text-gray-400 leading-relaxed">
+              Great marketing campaigns, improve customer experience, and drive
+              business growth through data-driven insights.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -1,17 +1,16 @@
 import { useState } from "react";
 import { HiBriefcase, HiDocumentText, HiMail } from "react-icons/hi";
-import { HiBuildingOffice, HiUser } from "react-icons/hi2";
+import { HiUser } from "react-icons/hi2";
 import { Link } from "react-router";
 
 const ClientSidebar = () => {
   const [activeItem, setActiveItem] = useState("about");
 
   const menuItems = [
-    { id: 1, path: "/", icon: HiBuildingOffice, label: "HOME" },
-    { id: 2, path: "about", icon: HiUser, label: "ABOUT" },
-    { id: 3, path: "resume", icon: HiDocumentText, label: "RESUME" },
-    { id: 4, path: "projects", icon: HiBriefcase, label: "PROJECTS" },
-    { id: 5, path: "contact", icon: HiMail, label: "CONTACT" },
+    { id: 1, path: "/", icon: HiUser, label: "ABOUT" },
+    { id: 2, path: "resume", icon: HiDocumentText, label: "RESUME" },
+    { id: 3, path: "projects", icon: HiBriefcase, label: "PROJECTS" },
+    { id: 4, path: "contact", icon: HiMail, label: "CONTACT" },
   ];
 
   return (
