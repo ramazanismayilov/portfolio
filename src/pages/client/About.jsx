@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div
-      className="bg-gradient-to-r from-[#15191C] via-[#202527] to-[#292a2a] min-h-screen rounded-4xl overflow-hidden"
+      className="bg-gradient-to-r from-[#15191C]/80 via-[#202527]/70 to-[#292a2a]/60 backdrop-blur-lg border-white/20 border-1 min-h-screen rounded-4xl overflow-hidden"
       style={{ transform: "perspective(5000px) rotateY(10deg)" }}
     >
       <div className="max-w-4xl">
@@ -10,15 +10,15 @@ const About = () => {
             <span className="text-green-400">A</span>bout Me
           </h5>
         </div>
-        <div className="flex justify-between gap-11 p-5">
-          <p className="text-[#CECECE] w-1/2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 p-5 items-start">
+          <p className="text-[#CECECE] leading-relaxed">
             Hey, there 👋 I'm Benjamin, a Software developer and Data scientist
             with over 8+ years of experience, specialising in Java and React.
             Also I proficient at using tools and programming languages such as
             Python or SQL to manipulate and analyze data.
           </p>
-          <div className="w-1/2">
-            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6">
+          <div className="flex justify-end">
+            <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 w-full max-w-md">
               <div className="flex items-center mb-4">
                 <span className="bg-green-500 text-black px-3 py-1 rounded text-sm font-medium">
                   Location:
@@ -50,7 +50,6 @@ const About = () => {
               </div>
             </div>
           </div>
-          <p></p>
         </div>
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-white mb-2">
