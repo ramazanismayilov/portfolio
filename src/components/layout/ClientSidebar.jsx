@@ -18,7 +18,7 @@ const ClientSidebar = () => {
       className="fixed left-20 top-1/2 -translate-y-1/2 z-50"
       style={{ transform: "perspective(1000px) rotateY(20deg)" }}
     >
-      {/* <div className="relative">
+      <div className="relative">
         <div className="relative bg-black/20 backdrop-blur-lg rounded-full shadow-2xl overflow-hidden border border-green-500/50">
           <div className="flex flex-col py-4 px-2">
             <div className="flex flex-col">
@@ -50,7 +50,7 @@ const ClientSidebar = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

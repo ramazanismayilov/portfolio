@@ -10,10 +10,10 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Profile = () => {
   return (
     <div
-      // className="relative w-[520px] h-[620px] bg-[url('../../assets/images/profile.jpg')] bg-cover bg-center rounded-4xl overflow-hidden"
-      // style={{ transform: "perspective(1000px) rotateY(10deg) rotateX(5deg)" }}
+      className="relative w-[520px] h-[620px] bg-[url('../../assets/images/profile.jpg')] bg-cover bg-center rounded-4xl overflow-hidden"
+      style={{ transform: "perspective(1000px) rotateY(10deg) rotateX(5deg)" }}
     >
-      {/* <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md pb-8">
+      <div className="absolute bottom-0 left-0 right-0 backdrop-blur-md pb-8">
         <div className="text-center text-white">
           <h2 className="text-3xl font-bold">Ramazan İsmayılov</h2>
           <div className="text-xl font-medium mt-1 h-8">
@@ -86,7 +86,7 @@ const Profile = () => {
             </Link>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ const About = () => {
       className="bg-gradient-to-r from-[#15191C]/80 via-[#202527]/70 to-[#292a2a]/60 backdrop-blur-lg border-white/20 border-1 min-h-screen rounded-4xl overflow-hidden"
       style={{ transform: "perspective(5000px) rotateY(10deg)" }}
     >
-      {/* <div className="max-w-4xl">
+      <div className="max-w-4xl">
         <div className="border-b w-full border-white/20 backdrop-blur-sm p-5">
           <h5 className="text-[#fefefe] text-[21px] tracking-wider">
             <span className="text-green-400">A</span>bout Me
@@ -84,7 +84,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
