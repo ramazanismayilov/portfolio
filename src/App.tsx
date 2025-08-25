@@ -2,12 +2,11 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiArrowUp } from 'react-icons/fi';
 import Navbar from './components/Navbar';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Projects from './sections/Projects';
-import Skills from './sections/Skills';
-import Experience from './sections/Experience';
-import Contact from './sections/Contact';
+import Hero from './pages/Hero';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Experience from './pages/Experience';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -39,7 +38,6 @@ function App() {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="flex-grow">
         <Hero />
-        <About />
         <Experience />
         <Skills />
         <Projects />
