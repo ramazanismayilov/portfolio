@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import logo from '../../assets/img/logo.png'
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -10,7 +11,7 @@ const navLinks = [
   { name: 'Contact', href: '#contact' },
 ];
 
-const Navbar = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (isOpen: boolean) => void }) => {
+const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuOpen: (isOpen: boolean) => void }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -34,10 +35,8 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
             href="#" 
             className="text-2xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
           >
-            RI
+            <img width={100} src={logo} alt="" />
           </a>
-
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
@@ -111,4 +110,4 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
   );
 };
 
-export default Navbar;
+export default Header;

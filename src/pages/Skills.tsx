@@ -95,16 +95,16 @@ const Skills = () => {
                   </h3>
                 </div>
                 <div className="p-6">
-                  <div className="grid grid-cols-1 gap-3">
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto pr-2 custom-scroll">
                     {skillCategory.items.map((skill, skillIndex) => (
                       <motion.div
                         key={skill.name}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
-                        transition={{ 
-                          duration: 0.3, 
-                          delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                        transition={{
+                          duration: 0.3,
+                          delay: categoryIndex * 0.1 + skillIndex * 0.05
                         }}
                       >
                         <SkillCard name={skill.name} icon={skill.icon} />
@@ -112,6 +112,7 @@ const Skills = () => {
                     ))}
                   </div>
                 </div>
+
               </motion.div>
             ))}
           </div>
@@ -145,8 +146,6 @@ const Skills = () => {
               ))}
             </div>
           </motion.div>
-
-          {/* Optional: Experience Level Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
