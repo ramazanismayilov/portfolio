@@ -6,20 +6,20 @@ const Contact = () => {
     {
       icon: <FiMail className="text-2xl text-green-600" />,
       title: 'Email Me',
-      description: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      description: 'ramazanismayilovh@gmail.com',
+      link: 'mailto:ramazanismayilovh@gmail.com',
     },
     {
       icon: <FiMapPin className="text-2xl text-green-600" />,
       title: 'Location',
-      description: 'San Francisco, CA',
-      link: 'https://www.google.com/maps/place/San+Francisco,+CA',
+      description: 'Baku, Azerbaijan',
+      link: 'https://maps.app.goo.gl/pATHP5bvpjurLpBL7',
     },
     {
       icon: <FiPhone className="text-2xl text-green-600" />,
       title: 'Call Me',
-      description: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      description: '+994 50-572-18-98',
+      link: 'tel:+994505721898',
     },
   ];
 
@@ -65,76 +65,6 @@ const Contact = () => {
               </motion.a>
             ))}
           </div>
-
-          <motion.form
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="John Doe"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Your Email *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-            <div className="mb-6">
-              <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                placeholder="How can I help you?"
-              />
-            </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Your Message *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                placeholder="Hi there, I would like to..."
-              ></textarea>
-            </div>
-            <motion.button
-              type="submit"
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-medium py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Send Message
-            </motion.button>
-          </motion.form>
         </motion.div>
       </div>
     </section>

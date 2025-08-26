@@ -1,122 +1,7 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
-
-const projects = [
-  {
-    id: 1,
-    title: 'Global Logistics Operations',
-    description: 'GLLOC is designed to simplify logistics operations and freight car tracking by providing real-time visibility and control. We ensure accuracy, transparency in every shipment, helping businesses manage their logistics with confidence. The system centralizes all operations, from shipment tracking to payments and reporting, in one reliable solution.',
-    tags: ['Angular', 'TypeScript', 'RxJS', 'ExcelJs', 'CibPay'],
-    image: 'glloc-website.png',
-    github: '',
-    demo: 'https://glloc.com',
-  },
-  {
-    id: 2,
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.',
-    tags: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
-    image: 'glloc-website.png',
-    github: 'https://github.com/username/task-manager',
-    demo: 'https://task-manager-demo.example.com',
-  },
-  {
-    id: 3,
-    title: 'Weather Dashboard',
-    description: 'A weather application that displays current weather and forecast using a weather API with location detection.',
-    tags: ['JavaScript', 'OpenWeather API', 'CSS3', 'HTML5'],
-    image: 'glloc-website.png',
-    github: 'https://github.com/username/weather-app',
-    demo: 'https://weather-demo.example.com',
-  },
-  {
-    id: 4,
-    title: 'Recipe Finder',
-    description: 'A web application to search for recipes based on ingredients with filtering options and favorite recipes functionality.',
-    tags: ['React', 'Spoonacular API', 'Context API', 'CSS Modules'],
-    image: 'glloc-website.png',
-    github: 'https://github.com/username/recipe-finder',
-    demo: 'https://recipe-finder-demo.example.com',
-  },
-  {
-    id: 5,
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website to showcase projects, skills, and experience with a clean and modern design.',
-    tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
-    image: 'glloc-website.png',
-    github: 'https://github.com/username/portfolio',
-    demo: 'https://portfolio-demo.example.com',
-  },
-  {
-    id: 6,
-    title: 'Chat Application',
-    description: 'A real-time chat application with private messaging, group chats, and online status indicators.',
-    tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    image: 'glloc-website.png',
-    github: 'https://github.com/username/chat-app',
-    demo: 'https://chat-demo.example.com',
-  },
-];
-
-const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5 }}
-      className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
-    >
-      <div className="h-48 overflow-hidden">
-        <img
-          src={`img/${project.image}`}
-          alt={project.title}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-        />
-      </div>
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-        <p className="text-gray-600 mb-4 flex-1">{project.description}</p>
-
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.tags.map((tag, index) => (
-            <span
-              key={index}
-              className="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="flex space-x-4 mt-auto pt-4 border-t border-gray-100">
-          {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-green-600 transition-colors flex items-center"
-              aria-label="View on GitHub"
-            >
-              <FiGithub className="mr-1" /> Code
-            </a>
-          )}
-          {project.demo && (
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-green-600 transition-colors flex items-center"
-              aria-label="View live demo"
-            >
-              <FiExternalLink className="mr-1" /> Live Demo
-            </a>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-};
+import { FiGithub } from 'react-icons/fi';
+import ProjectCard from '../components/common/ProjectCard';
+import { projectData } from '../data/project';
 
 const Projects = () => {
   return (
@@ -138,18 +23,15 @@ const Projects = () => {
               Here are some of my recent projects. Each project was built to solve a specific problem or explore new technologies.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {projectData.map(item => (
+              <ProjectCard key={item.id} project={item} />
             ))}
           </div>
-
           <div className="mt-12 text-center">
             <motion.a
-              href="https://github.com/username"
+              href="https://github.com/ramazanismayilov"
               target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

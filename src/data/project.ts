@@ -1,0 +1,58 @@
+import { Project } from "../types/project";
+
+export const projectData: Project[] = [
+    {
+        id: 1,
+        title: 'Global Logistics Operations',
+        description: 'GLLOC is designed to simplify logistics operations and freight car tracking by providing real-time visibility and control. We ensure accuracy, transparency in every shipment, helping businesses manage their logistics with confidence. The system centralizes all operations, from shipment tracking to payments and reporting, in one reliable solution.',
+        tags: ['Angular', 'TypeScript', 'RxJS', 'ExcelJs', 'CibPay'],
+        image: 'glloc.svg',
+        github: '',
+        demo: 'https://glloc.com',
+    },
+    {
+        id: 2,
+        title: 'Budget Management System',
+        description: 'Budget is designed for the internal use of the Ministry of Education of the Republic of Azerbaijan. The system also enables the management of financial operations between vendors and educational institutions. Its main goal is to centralize budget processes while enhancing transparency and efficiency',
+        tags: ['Angular', 'TypeScript', 'RxJS', 'ExcelJs', 'SIMA'],
+        image: 'budge.jpg',
+        github: '',
+        demo: '',
+    },
+    {
+        id: 3,
+        title: 'Servis333',
+        description: '333 Servis offers professional repair and installation services for air conditioners, combi boilers, and refrigerators. Through the website, users can explore services, view completed projects, and easily request a technician. The platform also provides company details, contact information, and location for customer convenience',
+        tags: ['NestJs', 'TypeScript', 'Typeorm', 'MySql', 'Multer'],
+        image: 'servis333.png',
+        github: '',
+        demo: 'https://servis333.az/',
+    },
+    {
+        id: 4,
+        title: 'Epic Games',
+        description: 'The backend system for Epic Games was built using NestJS. The project leverages TypeORM and PostgreSQL for robust and reliable database management. User authentication and security are ensured with JWT and Bcrypt. Swagger is integrated for seamless API documentation, and Cloudinary is used to support media uploads.',
+        tags: ['NestJs', 'TypeORM', 'PostgreSQL', 'JWT & Bcrypt'],
+        image: 'epic-games.svg',
+        github: 'https://github.com/ramazanismayilov/epicGames-api',
+        demo: '',
+    },
+    // {
+    //     id: 5,
+    //     title: 'Portfolio Website',
+    //     description: 'A personal portfolio website to showcase projects, skills, and experience with a clean and modern design.',
+    //     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
+    //     image: 'glloc-website.png',
+    //     github: 'https://github.com/username/portfolio',
+    //     demo: 'https://portfolio-demo.example.com',
+    // },
+    // {
+    //     id: 6,
+    //     title: 'Chat Application',
+    //     description: 'A real-time chat application with private messaging, group chats, and online status indicators.',
+    //     tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
+    //     image: 'glloc-website.png',
+    //     github: 'https://github.com/username/chat-app',
+    //     demo: 'https://chat-demo.example.com',
+    // },
+];
