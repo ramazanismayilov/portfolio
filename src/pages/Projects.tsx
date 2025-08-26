@@ -69,7 +69,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
     >
       <div className="h-48 overflow-hidden">
         <img
-          src={`../../public/img/${project.image}`}
+          src={`img/${project.image}`}
           alt={project.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
