@@ -4,19 +4,19 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 const projects = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform with user authentication, product catalog, shopping cart, and payment integration.',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
-    image: 'https://via.placeholder.com/600x400/4ade80/ffffff?text=E-commerce+Platform',
-    github: 'https://github.com/username/ecommerce-platform',
-    demo: 'https://ecommerce-demo.example.com',
+    title: 'Global Logistics Operations',
+    description: 'GLLOC is designed to simplify logistics operations and freight car tracking by providing real-time visibility and control. We ensure accuracy, transparency in every shipment, helping businesses manage their logistics with confidence. The system centralizes all operations, from shipment tracking to payments and reporting, in one reliable solution.',
+    tags: ['Angular', 'TypeScript', 'RxJS', 'ExcelJs', 'CibPay'],
+    image: 'glloc-website.png',
+    github: '',
+    demo: 'https://glloc.com',
   },
   {
     id: 2,
     title: 'Task Management App',
     description: 'A collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.',
     tags: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
-    image: 'https://via.placeholder.com/600x400/60a5fa/ffffff?text=Task+Management',
+    image: 'glloc-website.png',
     github: 'https://github.com/username/task-manager',
     demo: 'https://task-manager-demo.example.com',
   },
@@ -25,7 +25,7 @@ const projects = [
     title: 'Weather Dashboard',
     description: 'A weather application that displays current weather and forecast using a weather API with location detection.',
     tags: ['JavaScript', 'OpenWeather API', 'CSS3', 'HTML5'],
-    image: 'https://via.placeholder.com/600x400/60a5fa/ffffff?text=Weather+Dashboard',
+    image: 'glloc-website.png',
     github: 'https://github.com/username/weather-app',
     demo: 'https://weather-demo.example.com',
   },
@@ -34,7 +34,7 @@ const projects = [
     title: 'Recipe Finder',
     description: 'A web application to search for recipes based on ingredients with filtering options and favorite recipes functionality.',
     tags: ['React', 'Spoonacular API', 'Context API', 'CSS Modules'],
-    image: 'https://via.placeholder.com/600x400/f59e0b/ffffff?text=Recipe+Finder',
+    image: 'glloc-website.png',
     github: 'https://github.com/username/recipe-finder',
     demo: 'https://recipe-finder-demo.example.com',
   },
@@ -43,7 +43,7 @@ const projects = [
     title: 'Portfolio Website',
     description: 'A personal portfolio website to showcase projects, skills, and experience with a clean and modern design.',
     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
-    image: 'https://via.placeholder.com/600x400/8b5cf6/ffffff?text=Portfolio',
+    image: 'glloc-website.png',
     github: 'https://github.com/username/portfolio',
     demo: 'https://portfolio-demo.example.com',
   },
@@ -52,7 +52,7 @@ const projects = [
     title: 'Chat Application',
     description: 'A real-time chat application with private messaging, group chats, and online status indicators.',
     tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    image: 'https://via.placeholder.com/600x400/ec4899/ffffff?text=Chat+App',
+    image: 'glloc-website.png',
     github: 'https://github.com/username/chat-app',
     demo: 'https://chat-demo.example.com',
   },
@@ -69,7 +69,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
     >
       <div className="h-48 overflow-hidden">
         <img
-          src={project.image}
+          src={`../../public/img/${project.image}`}
           alt={project.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />

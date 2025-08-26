@@ -26,12 +26,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // dəyişiklikləri izləmək üçün ayrıca useEffect
-  useEffect(() => {
-    console.log("showScrollToTop dəyişdi:", showScrollToTop);
-  }, [showScrollToTop]);
-
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
-import profileImg from '../assets/img/profile.png';
+import profileImg from '../../public/img/profile.png';
 
 const Hero = () => {
   const socialLinks = [
@@ -11,7 +11,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="about" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section id="#" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-green-50 opacity-90"></div>
       </div>

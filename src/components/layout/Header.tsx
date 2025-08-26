@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../../assets/img/logo.png'
+import logo from '../../../public/img/logo.png'
 import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'About', href: '#about' },
+  { name: 'About', href: '#' },
   { name: 'Experience', href: '#experience' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
@@ -31,12 +31,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <Link
-            to="/"
+          <a
+            href="#"
             className="text-2xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
           >
             <img width={100} src={logo} alt="logo" />
-          </Link>
+          </a>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
