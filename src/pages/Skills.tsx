@@ -60,8 +60,8 @@ const SkillCard = ({ name, icon }: { name: string; icon: string }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="section bg-white py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-16 md:py-24 bg-white">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ const Skills = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              My <span className="gradient-text">Skills</span>
+              My <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">Skills</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
             <p className="mt-6 text-gray-600 max-w-2xl mx-auto">

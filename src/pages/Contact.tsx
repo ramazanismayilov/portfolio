@@ -24,8 +24,8 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-16 md:py-24 bg-white">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const Contact = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Get In <span className="gradient-text">Touch</span>
+              Get In <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">Touch</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
             <p className="mt-6 text-gray-600 max-w-2xl mx-auto">

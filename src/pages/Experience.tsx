@@ -42,8 +42,8 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="section bg-gray-50 py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-16 md:py-24 bg-gray-50">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const Experience = () => {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Work <span className="gradient-text">Experience</span>
+              Work <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">Experience</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
           </div>

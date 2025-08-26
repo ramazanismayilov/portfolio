@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-green-50 opacity-90"></div>
       </div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -26,11 +26,9 @@ const Hero = () => {
             <span className="inline-block px-3 py-1 text-sm font-medium text-green-600 bg-green-50 rounded-full mb-6">
               Hello, I'm a Full Stack Developer
             </span>
-
             <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold mb-6 leading-tight">
-              Who <span className="gradient-text">am I</span> ?
+              Who <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">am I</span> ?
             </h1>
-
             <p className="text-md text-gray-600 mb-10">
               I have over 1 year of experience in programming. I have contributed
               to the development of ERP and CRM systems, payment integrations,
@@ -40,22 +38,10 @@ const Hero = () => {
               player. My goal is to take part in innovative projects to enhance my
               professional growth and add value to the company.
             </p>
-
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-12">
-              <a
-                href="#projects"
-                className="btn btn-primary px-8 py-4 text-lg font-semibold"
-              >
-                View My Work
-              </a>
-              <a
-                href="#contact"
-                className="btn bg-white text-gray-800 border-2 border-gray-200 hover:border-green-500 px-8 py-4 text-lg font-semibold hover:shadow-md"
-              >
-                Contact Me
-              </a>
+              <a href="#projects" className="button">View My Work</a>
+              <a href="#contact" className="button">Contact Me</a>
             </div>
-
             <div className="flex justify-center md:justify-start space-x-6">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -64,8 +50,7 @@ const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-500 hover:text-green-600 transition-colors duration-200 text-xl"
-                  whileHover={{ y: -3 }}
-                  aria-label={social.url.split('/').pop()}
+                  whileHover={{ y: -6 }}
                 >
                   {social.icon}
                 </motion.a>

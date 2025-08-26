@@ -18,7 +18,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">John Doe</h3>
@@ -46,8 +46,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#home" 
+                <a
+                  href="#home"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                   onClick={scrollToTop}
                 >
@@ -55,32 +55,32 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a 
-                  href="#about" 
+                <a
+                  href="#about"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   About
                 </a>
               </li>
               <li>
-                <a 
-                  href="#experience" 
+                <a
+                  href="#experience"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Experience
                 </a>
               </li>
               <li>
-                <a 
-                  href="#projects" 
+                <a
+                  href="#projects"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Projects
                 </a>
               </li>
               <li>
-                <a 
-                  href="#contact" 
+                <a
+                  href="#contact"
                   className="text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   Contact
@@ -117,14 +117,14 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} John Doe. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
             >
               Privacy Policy
             </a>
-            <a 
-              href="#" 
+            <a
+              href="#"
               className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
             >
               Terms of Service

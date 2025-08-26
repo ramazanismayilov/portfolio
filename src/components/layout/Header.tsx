@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import logo from '../../assets/img/logo.png'
+import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -24,25 +25,24 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
   }, []);
 
   return (
-    <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md shadow-sm' : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md shadow-sm' : 'bg-transparent'
+        }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          <a 
-            href="#" 
+          <Link
+            to="/"
             className="text-2xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
           >
-            <img width={100} src={logo} alt="" />
-          </a>
+            <img width={100} src={logo} alt="logo" />
+          </Link>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="nav-link hover:text-green-600 transition-colors duration-200"
+                className="text-gray-600 hover:text-green-600 duration-200 font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
@@ -50,14 +50,12 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
             ))}
             <a
               href="#contact"
-              className="btn btn-primary ml-4"
+              className="button ml-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Get in Touch
             </a>
           </nav>
-
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -73,8 +71,6 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -97,7 +93,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
               ))}
               <a
                 href="#contact"
-                className="block w-full text-center btn btn-primary mt-4"
+                className="button w-full"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get in Touch

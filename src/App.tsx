@@ -26,11 +26,14 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // dəyişiklikləri izləmək üçün ayrıca useEffect
+  useEffect(() => {
+    console.log("showScrollToTop dəyişdi:", showScrollToTop);
+  }, [showScrollToTop]);
+
+
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -51,7 +54,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50"
+            className={`fixed bottom-6 right-6 cursor-pointer bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50 ${showScrollToTop ? "block" : "hidden"}`}
             aria-label="Scroll to top"
           >
             <FiArrowUp className="w-5 h-5" />

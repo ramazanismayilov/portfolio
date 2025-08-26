@@ -68,19 +68,19 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
       className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col h-full"
     >
       <div className="h-48 overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title} 
+        <img
+          src={project.image}
+          alt={project.title}
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div className="p-6 flex-1 flex flex-col">
         <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
         <p className="text-gray-600 mb-4 flex-1">{project.description}</p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, index) => (
-            <span 
+            <span
               key={index}
               className="px-2 py-1 bg-green-50 text-green-700 text-xs font-medium rounded-full"
             >
@@ -88,12 +88,12 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
             </span>
           ))}
         </div>
-        
+
         <div className="flex space-x-4 mt-auto pt-4 border-t border-gray-100">
           {project.github && (
-            <a 
-              href={project.github} 
-              target="_blank" 
+            <a
+              href={project.github}
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-green-600 transition-colors flex items-center"
               aria-label="View on GitHub"
@@ -102,9 +102,9 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
             </a>
           )}
           {project.demo && (
-            <a 
-              href={project.demo} 
-              target="_blank" 
+            <a
+              href={project.demo}
+              target="_blank"
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-green-600 transition-colors flex items-center"
               aria-label="View live demo"
@@ -120,8 +120,8 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="section bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-16 md:py-24 bg-gray-50">
+      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -131,7 +131,7 @@ const Projects = () => {
         >
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured <span className="gradient-text">Projects</span>
+              My <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">Projects</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
             <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
