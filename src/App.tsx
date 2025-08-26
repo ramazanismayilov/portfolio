@@ -15,13 +15,13 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
+      if (window.scrollY > 500) {
         setShowScrollToTop(true);
       } else {
         setShowScrollToTop(false);
       }
     };
-
+    handleScroll()
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -48,7 +48,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             onClick={scrollToTop}
-            className={`fixed bottom-6 right-6 cursor-pointer bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50 ${showScrollToTop ? "block" : "hidden"}`}
+            className='fixed bottom-6 right-6 cursor-pointer bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50'
             aria-label="Scroll to top"
           >
             <FiArrowUp className="w-5 h-5" />

@@ -36,23 +36,5 @@ export const projectData: Project[] = [
         image: 'epic-games.svg',
         github: 'https://github.com/ramazanismayilov/epicGames-api',
         demo: '',
-    },
-    // {
-    //     id: 5,
-    //     title: 'Portfolio Website',
-    //     description: 'A personal portfolio website to showcase projects, skills, and experience with a clean and modern design.',
-    //     tags: ['React', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
-    //     image: 'glloc-website.png',
-    //     github: 'https://github.com/username/portfolio',
-    //     demo: 'https://portfolio-demo.example.com',
-    // },
-    // {
-    //     id: 6,
-    //     title: 'Chat Application',
-    //     description: 'A real-time chat application with private messaging, group chats, and online status indicators.',
-    //     tags: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-    //     image: 'glloc-website.png',
-    //     github: 'https://github.com/username/chat-app',
-    //     demo: 'https://chat-demo.example.com',
-    // },
+    }
 ];

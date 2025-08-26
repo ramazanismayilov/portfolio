@@ -1,29 +1,22 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp, FiPhone, FiMapPin } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiArrowUp, FiPhone, FiMapPin, FiInstagram } from 'react-icons/fi';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/username' },
-    { icon: <FiLinkedin />, url: 'https://linkedin.com/in/username' },
-    { icon: <FiTwitter />, url: 'https://twitter.com/username' },
-    { icon: <FiMail />, url: 'mailto:your.email@example.com' },
+    { icon: <FiGithub />, url: 'https://github.com/ramazanismayilov' },
+    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/ramazan-ismayilov' },
+    { icon: <FiInstagram />, url: 'https://www.instagram.com/r.ismayilof' },
+    { icon: <FiMail />, url: 'mailto:ramazanismayilovh@gmail.com' },
   ];
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-white border-t border-gray-200 pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">John Doe</h3>
-            <p className="text-gray-400 mb-6">
-              A passionate Full Stack Developer dedicated to creating beautiful, functional, and user-centered digital experiences.
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">Ramazan İsmayılov</h3>
+            <p className="text-gray-600 mb-6 md:max-w-sm lg:max-w-md">
+              Full Stack Developer with passion for creating innovative solutions and enhancing user experiences.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -32,7 +25,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white text-xl transition-colors duration-200"
+                  className="text-gray-500 hover:text-green-600 text-xl transition-colors duration-200 p-2 rounded-lg hover:bg-green-50"
                   whileHover={{ y: -3 }}
                   aria-label={social.url.split('/').pop()}
                 >
@@ -41,105 +34,79 @@ const Footer = () => {
               ))}
             </div>
           </div>
-
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-lg font-semibold mb-4 text-gray-800">Quick Links</h4>
+            <ul className="space-y-3">
               <li>
-                <a
-                  href="#home"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                  onClick={scrollToTop}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <a href="#" className="text-gray-600 hover:text-green-600 transition-colors duration-200 flex items-center group">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                   About
                 </a>
               </li>
               <li>
-                <a
-                  href="#experience"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <a href="#experience" className="text-gray-600 hover:text-green-600 transition-colors duration-200 flex items-center group">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                   Experience
                 </a>
               </li>
               <li>
-                <a
-                  href="#projects"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <a href="#skills" className="text-gray-600 hover:text-green-600 transition-colors duration-200 flex items-center group">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="text-gray-600 hover:text-green-600 transition-colors duration-200 flex items-center group">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                   Projects
                 </a>
               </li>
               <li>
-                <a
-                  href="#contact"
-                  className="text-gray-400 hover:text-white transition-colors duration-200"
-                >
+                <a href="#contact" className="text-gray-600 hover:text-green-600 transition-colors duration-200 flex items-center group">
+                  <span className="w-2 h-2 bg-green-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
                   Contact
                 </a>
               </li>
             </ul>
           </div>
-
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li className="flex items-start">
-                <FiMail className="mr-3 mt-1 text-green-400" />
-                <a href="mailto:your.email@example.com" className="hover:text-white transition-colors duration-200">
-                  your.email@example.com
-                </a>
+            <h4 className="text-lg font-semibold mb-4 text-gray-800">Contact Info</h4>
+            <ul className="space-y-4 text-gray-600">
+              <li className="flex items-start group">
+                <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors duration-200 mr-3">
+                  <FiMail className="text-green-600" size={16} />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Email</p>
+                  <a href="mailto:ramazanismayilovh@gmail.com" className="hover:text-green-600 transition-colors duration-200">
+                    ramazanismayilovh@gmail.com
+                  </a>
+                </div>
               </li>
-              <li className="flex items-start">
-                <FiMapPin className="mr-3 mt-1 text-green-400" />
-                <span>San Francisco, CA</span>
+              <li className="flex items-start group">
+                <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors duration-200 mr-3">
+                  <FiMapPin className="text-green-600" size={16} />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Location</p>
+                  <span>Baku, Azerbaijan</span>
+                </div>
               </li>
-              <li className="flex items-start">
-                <FiPhone className="mr-3 mt-1 text-green-400" />
-                <a href="tel:+15551234567" className="hover:text-white transition-colors duration-200">
-                  +1 (555) 123-4567
-                </a>
+              <li className="flex items-start group">
+                <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors duration-200 mr-3">
+                  <FiPhone className="text-green-600" size={16} />
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Phone</p>
+                  <a href="tel:+994505721898" className="hover:text-green-600 transition-colors duration-200">
+                    +994 50-572-18-98
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
         </div>
-
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} John Doe. All rights reserved.
-          </p>
-          <div className="flex space-x-6">
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href="#"
-              className="text-gray-400 hover:text-white text-sm transition-colors duration-200"
-            >
-              Terms of Service
-            </a>
-          </div>
-        </div>
       </div>
-
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors z-50 flex items-center justify-center"
-        aria-label="Scroll to top"
-      >
-        <FiArrowUp className="w-5 h-5" />
-      </button>
     </footer>
   );
 };

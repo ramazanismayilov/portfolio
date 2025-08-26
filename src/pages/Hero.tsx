@@ -11,7 +11,7 @@ const Hero = () => {
   ];
 
   return (
-    <section id="#" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+    <section id="#" className="relative pt-8 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white to-green-50 opacity-90"></div>
       </div>
@@ -39,18 +39,19 @@ const Hero = () => {
               professional growth and add value to the company.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mb-12">
-              <a href="#projects" className="button">View My Work</a>
+              <a download href="pdf/ramazan-ismayilov.pdf" className="button">Download CV</a>
               <a href="#contact" className="button">Contact Me</a>
             </div>
-            <div className="flex justify-center md:justify-start space-x-6">
+            <div className="flex gap-3 items-center justify-center md:justify-start">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-500 hover:text-green-600 transition-colors duration-200 text-xl"
-                  whileHover={{ y: -6 }}
+                  className="text-gray-500 hover:text-green-600 text-xl transition-colors duration-200 p-2 rounded-lg hover:bg-green-50"
+                  whileHover={{ y: -3 }}
+                  aria-label={social.url.split('/').pop()}
                 >
                   {social.icon}
                 </motion.a>

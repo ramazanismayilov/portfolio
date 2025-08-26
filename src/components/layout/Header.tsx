@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
-import logo from '../../../public/img/logo.png'
-import { Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'About', href: '#' },
@@ -33,9 +31,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
         <div className="flex justify-between items-center h-16 md:h-20">
           <a
             href="#"
-            className="text-2xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
+            className="text-4xl font-bold bg-gradient-to-r from-green-500 to-green-600 bg-clip-text text-transparent"
           >
-            <img width={100} src={logo} alt="logo" />
+            RI
           </a>
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
@@ -78,9 +76,9 @@ const Header = ({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden"
+            className="md:hidden overflow-hidden "
           >
-            <div className="px-4 pt-2 pb-4 space-y-4 bg-white border-t border-gray-100">
+            <div className="px-4 pt-2 pb-4 space-y-4  backdrop-blur-md shadow-sm border-t border-gray-100">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
