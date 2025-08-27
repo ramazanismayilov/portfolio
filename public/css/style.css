@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
 
 .button {
   display: inline-flex;
@@ -20,6 +22,10 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -4px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+}
+
+.modal-header [aria-label="Close"] {
+  @apply text-green-800 hover:bg-green-100;
 }
 
 ::-webkit-scrollbar {
