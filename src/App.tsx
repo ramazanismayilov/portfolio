@@ -8,9 +8,9 @@ import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Contact from './pages/Contact';
 import Footer from './components/layout/Footer';
+import Education from './pages/Education';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
@@ -32,9 +32,10 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Header />
       <main className="flex-grow">
         <Hero />
+        <Education />
         <Experience />
         <Skills />
         <Projects />
