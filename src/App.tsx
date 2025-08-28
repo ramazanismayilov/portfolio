@@ -15,7 +15,7 @@ import CustomCursor from './components/common/Cursor';
 function App() {
   return (
     <>
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">

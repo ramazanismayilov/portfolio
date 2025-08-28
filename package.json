@@ -14,7 +14,6 @@
     "flowbite-react": "^0.12.7",
     "framer-motion": "^11.0.5",
     "react": "^19.0.0",
-    "react-cursor-follow": "^2.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
