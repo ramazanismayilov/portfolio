@@ -42,7 +42,7 @@ export const technicalSkills = [
             { name: 'Git & GitHub', icon: 'git.svg' },
             { name: 'Figma', icon: 'figma.svg' },
             { name: 'VS Code', icon: 'vscode.svg' },
-            { name: 'Bruno', icon: 'vscode.svg' },
+            { name: 'Bruno', icon: 'bruno.svg' },
             { name: 'Postman', icon: 'postman.svg' },
             { name: 'Webpack', icon: 'webpack.svg' },
             { name: 'Vite', icon: 'vite.svg' },

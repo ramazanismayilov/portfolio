@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* * {
+  cursor: none !important;
+} */
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -23,7 +27,10 @@
 }
 
 .modal-header [aria-label="Close"] {
-  @apply text-green-800 hover:bg-green-100;
+  @apply text-green-800 hover:bg-green-100 p-2 transition-all delay-100;
+}
+.modal-header [aria-label="Close"] svg {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

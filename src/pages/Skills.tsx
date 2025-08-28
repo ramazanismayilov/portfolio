@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import SkillCard from '../components/common/SkillCard';
-import { FaAward, FaChevronRight, FaCode, FaServer, FaStar, FaTools } from 'react-icons/fa';
+import { FaAward, FaChevronRight } from 'react-icons/fa';
 import { useState } from 'react';
 import { additionalSkills, technicalSkills } from '../data/skill';
 
@@ -9,7 +9,6 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +22,7 @@ const Skills = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <FaAward size={16} />
-            Technical Expertise
+            Technical Skills
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"> My <span className="text-green-500">Skills</span></h2>
         </motion.div>

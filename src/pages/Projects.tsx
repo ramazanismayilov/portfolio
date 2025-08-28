@@ -6,7 +6,7 @@ import ProjectCard from '../components/common/ProjectCard';
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 md:py-28 bg-gradient-to-br from-gray-50 via-white to-emerald-50/20">
+    <section id="projects" className="py-20 bg-gradient-to-br from-gray-50 via-white to-emerald-50/20">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,6 @@ const Projects = () => {
               <motion.a
                 href="https://github.com/ramazanismayilov"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-green-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

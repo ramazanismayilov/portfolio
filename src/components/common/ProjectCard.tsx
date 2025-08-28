@@ -79,7 +79,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </motion.div>
       {openModal && (
         <ProjectModal
-          size="5xl"
+          size="6xl"
           title={project.title}
           description={project.description}
           skills={project.tags}

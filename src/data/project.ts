@@ -54,7 +54,7 @@ export const projectData: Project[] = [
             'Toastr & Spinner',
             'Rich Text Editor',
         ],
-        image: 'budge.jpg',
+        image: 'budge.png',
         github: '',
         demo: '',
     },
