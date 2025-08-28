@@ -7,13 +7,13 @@ export const experienceData = [
         duration: '12/2024 to present',
         type: "Part-time",
         description: [
-            'Development of multi-role and multi-level access systems with advanced user permission management',
-            'Integration of SİMA electronic signature system for secure authentication and document signing',
-            'Implementation of online payment systems and integration with government payment services',
-            'Creation of management dashboards, analytical reports, and data visualizations',
-            'Optimization of RESTful API communication between frontend and backend services'
+            'Multi-role user management system',
+            'Secure login and document signing with SİMA e-signature',
+            'Integration with online payment services',
+            'Management dashboard, reports, and data visualizations',
+            'API communication between frontend and backend'
         ],
-        technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "TypeScript"],
+        technologies: ["Angular", "RxJs", "TypeScript", "Html", "Css", "Bootstrap", "Tailwind css", "ExcelJs", "XLSX"],
     },
     {
         id: 2,
@@ -23,11 +23,11 @@ export const experienceData = [
         duration: '04/2024 to 08/2024',
         type: "Part-time",
         description: [
-            'I worked as part of a team on developing a POS and inventory management system for stores and restaurants',
-            'I implemented the frontend using React.js, creating a responsive and user-friendly interface',
-            'I collaborated closely with backend developers and team members to deliver a fully functional and efficient system.'
+            'Developed POS and inventory management system for retail and restaurants',
+            'Built responsive frontend with React.js',
+            'Collaborated with backend team to deliver a complete solution'
         ],
-        technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "TypeScript"],
+        technologies: ["React", "TypeScript", "Html", "Css", "Bootstrap"],
     },
     {
         id: 3,
@@ -37,9 +37,10 @@ export const experienceData = [
         duration: '07/2024 to 09/2024',
         type: "Remote",
         description: [
-            'Developing and maintaining an internal company system using Angular to streamline internal processes and enhance productivity',
-            'Collaborating closely with backend developers and UI/UX designers to create a cohesive, scalable, and efficient system tailored to the company’s needs'
+            'Developed an internal company platform to improve communication and teamwork using Angular',
+            'Enhanced internal workflows and productivity by building user-friendly features',
+            'Worked closely with backend and design teams to ensure scalability and seamless user experience'
         ],
-        technologies: ["React", "Node.js", "MongoDB", "AWS", "Docker", "TypeScript"],
+        technologies: ["Angular", "RxJs", "TypeScript", "Html", "Css", "Bootstrap"]
     },
 ];

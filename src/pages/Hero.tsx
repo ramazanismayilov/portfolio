@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl"
             >
-              I have over <span className="font-semibold text-green-600">1 year of experience</span> in programming.
+              I'm Ramazan. I have over <span className="font-semibold text-green-600">1 year of experience</span> in programming.
               I have contributed to the development of <span className="font-semibold">ERP and CRM systems</span>,
               payment integrations, and multi-role platforms. I am eager to learn, quick to adapt to new technologies,
               and an active team player focused on creating <span className="font-semibold text-green-600">innovative solutions</span>.

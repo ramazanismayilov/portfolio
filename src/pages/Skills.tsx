@@ -1,142 +1,126 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import SkillCard from '../components/common/SkillCard';
-
-const technicialSkills = [
-  {
-    category: 'Frontend',
-    items: [
-      { name: 'HTML5', icon: 'html.svg' },
-      { name: 'CSS3', icon: 'css.svg' },
-      { name: 'Sass/Scss', icon: 'sass.svg' },
-      { name: 'Tailwind css', icon: 'tailwindcss.svg' },
-      { name: 'Bootstrap', icon: 'bootstrap.svg' },
-      { name: 'JavaScript', icon: 'javascript.svg' },
-      { name: 'TypeScript', icon: 'typescript.svg' },
-      { name: 'React', icon: 'react.svg' },
-      { name: 'Angular', icon: 'angular.svg' },
-      { name: 'Redux', icon: 'redux.svg' },
-    ],
-  },
-  {
-    category: 'Backend',
-    items: [
-      { name: 'Node.js', icon: 'nodejs.svg' },
-      { name: 'Express.js', icon: 'expressjs.svg' },
-      { name: 'Nest.js', icon: 'nestjs.svg' },
-      { name: 'TypeORM', icon: 'typeorm.svg' },
-      { name: 'Sequelize', icon: 'sequelize.svg' },
-      { name: 'PostgreSQL', icon: 'postgresql.svg' },
-      { name: 'MongoDB', icon: 'mongodb.svg' },
-      { name: 'Redis', icon: 'redis.svg' },
-      { name: 'Socket.io', icon: 'socketio.svg' },
-    ],
-  },
-  {
-    category: 'Tools & Other',
-    items: [
-      { name: 'Git & GitHub', icon: 'git.svg' },
-      // { name: 'Docker', icon: 'docker.svg' },
-      { name: 'Figma', icon: 'figma.svg' },
-      { name: 'VS Code', icon: 'vscode.svg' },
-      { name: 'Postman', icon: 'postman.svg' },
-      { name: 'Webpack', icon: 'webpack.svg' },
-      { name: 'Vite', icon: 'vite.svg' },
-      { name: 'Npm', icon: 'npm.svg' },
-    ],
-  },
-];
-
-const additionalSkills = [
-  'Agile Methodologies',
-  'Team Collaboration',
-  'Problem Solving',
-  'Code Review',
-  'Technical Writing',
-  'Time Management',
-  'Adaptability',
-  'Effective Communication',
-  'Leadership',
-  'Continuous Learning'
-];
+import { FaAward, FaChevronRight, FaCode, FaServer, FaStar, FaTools } from 'react-icons/fa';
+import { useState } from 'react';
+import { additionalSkills, technicalSkills } from '../data/skill';
 
 const Skills = () => {
+  const [activeCategory, setActiveCategory] = useState('Frontend');
   return (
-    <section id="skills" className="py-16 md:py-24 bg-white">
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="skills" className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-6xl mx-auto"
+          className="text-center mb-16"
         >
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              My <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-green-600">Skills</span>
-            </h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
-            <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-              Here are the technologies and tools I've been working with. I'm always eager to learn new technologies to stay current with industry trends.
-            </p>
+          <motion.div
+            className="inline-flex items-center gap-2 bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-6"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <FaAward size={16} />
+            Technical Expertise
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"> My <span className="text-green-500">Skills</span></h2>
+        </motion.div>
+        <div className="flex justify-center mb-12">
+          <div className="bg-white rounded-2xl p-2 shadow-lg border border-gray-200 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+              {technicalSkills.map((category) => {
+                const Icon = category.icon;
+                return (
+                  <motion.button
+                    key={category.category}
+                    onClick={() => setActiveCategory(category.category)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`flex items-center space-x-2 cursor-pointer px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${activeCategory === category.category
+                      ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
+                      : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
+                      }`}
+                  >
+                    <span className="text-lg"><Icon size={20} /></span>
+                    <span>{category.category}</span>
+                  </motion.button>
+                );
+              })}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {technicialSkills.map((skillCategory, categoryIndex) => (
-              <motion.div
-                key={skillCategory.category}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
-              >
-                <div className="bg-gradient-to-r from-green-400 to-green-600 p-4">
-                  <h3 className="text-xl font-bold text-center text-white">
-                    {skillCategory.category}
-                  </h3>
-                </div>
-                <div className="p-6">
-                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto pr-2 custom-scroll">
-                    {skillCategory.items.map((skill, skillIndex) => (
+        </div>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="mb-16"
+          >
+            {technicalSkills
+              .filter(cat => cat.category === activeCategory)
+              .map((category) => (
+                <div key={category.category}>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  >
+                    {category.items.map((skill, skillIndex) => (
                       <motion.div
                         key={skill.name}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
-                        transition={{ duration: 0.1, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.3, delay: skillIndex * 0.1 }}
                       >
-                        <SkillCard name={skill.name} icon={skill.icon} />
+                        <SkillCard
+                          name={skill.name}
+                          icon={skill.icon}
+                        />
                       </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
-
+              ))}
+          </motion.div>
+        </AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-2">
+              <FaChevronRight className="text-green-500" size={20} />
+              Soft Skills
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {additionalSkills.map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                whileHover={{ y: -5, scale: 1.05 }}
+                className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-100 hover:border-green-300 rounded-xl p-4 text-center cursor-pointer group hover:shadow-lg transition-all duration-300"
+              >
+                <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                  {skill.icon}
+                </div>
+                <span className="text-[12px] sm:text-sm font-medium text-gray-700 group-hover:text-green-600 transition-colors duration-300">
+                  {skill.name}
+                </span>
               </motion.div>
             ))}
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-gray-50 rounded-2xl p-8"
-          >
-            <h3 className="text-2xl font-bold text-center mb-8 text-gray-800">Additional Skills</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {additionalSkills.map((skill, index) => (
-                <motion.span
-                  key={skill}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.1, delay: index * 0.03 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="inline-block bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow-md hover:bg-green-50 hover:text-green-600 transition-all duration-200 cursor-pointer border border-gray-100"
-                >
-                  {skill}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
