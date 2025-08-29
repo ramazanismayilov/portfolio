@@ -1,6 +1,3 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiArrowUp } from 'react-icons/fi';
 import Header from './components/layout/Header';
 import Hero from './pages/Hero';
 import Projects from './pages/Projects';
@@ -10,12 +7,21 @@ import Contact from './pages/Contact';
 import Footer from './components/layout/Footer';
 import Education from './pages/Education';
 import ScrollToTopButton from './components/common/ScrollToTopButton';
-import CustomCursor from './components/common/Cursor';
+import CursorKit from '@ri-dev/react-cursor-kit';
 
 function App() {
   return (
     <>
-      <CustomCursor />
+      <CursorKit
+        innerSize={9}
+        innerColor="#22c55e"
+        innerBorderColor="#16a34a"
+        outerSize={40}
+        outerOpacity={0.5}
+        outerScale={1.5}
+        outerBorderColor="#22c55e"
+        trailingSpeed={8}
+      />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
