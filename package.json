@@ -10,7 +10,7 @@
     "css": "npx @tailwindcss/cli -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch"
   },
   "dependencies": {
-    "@ri-dev/react-cursor-kit": "^0.1.0",
+    "@ri-dev/react-cursor-kit": "^0.1.1",
     "@tailwindcss/vite": "^4.1.12",
     "flowbite-react": "^0.12.7",
     "framer-motion": "^11.0.5",
