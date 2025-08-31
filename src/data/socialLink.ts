@@ -1,4 +1,5 @@
 import { FiGithub, FiInstagram, FiLinkedin, FiMail } from "react-icons/fi";
+import { RiNpmjsFill } from "react-icons/ri";
 
 export const socialLinkData = [
     {
@@ -18,6 +19,12 @@ export const socialLinkData = [
         url: 'https://www.instagram.com/r.ismayilof',
         label: 'Instagram',
         color: 'hover:text-pink-600 hover:bg-pink-50'
+    },
+    {
+        icon: RiNpmjsFill,
+        url: 'https://www.npmjs.com/~ramazanismayilov',
+        label: 'NPM',
+        color: 'hover:text-red-600 hover:bg-red-50'
     },
     {
         icon: FiMail,

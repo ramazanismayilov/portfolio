@@ -8,6 +8,7 @@ import Footer from './components/layout/Footer';
 import Education from './pages/Education';
 import ScrollToTopButton from './components/common/ScrollToTopButton';
 import CursorKit from '@ri-dev/react-cursor-kit';
+import Package from './pages/Package';
 
 function App() {
   return (
@@ -18,7 +19,6 @@ function App() {
         innerBorderColor="#16a34a"
         outerSize={40}
         outerOpacity={0.5}
-        outerScale={1.5}
         outerBorderColor="#22c55e"
         trailingSpeed={8}
       />
@@ -30,6 +30,7 @@ function App() {
           <Experience />
           <Skills />
           <Projects />
+          <Package />
           <Contact />
         </main>
         <Footer />

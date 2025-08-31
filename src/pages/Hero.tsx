@@ -2,12 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiDownload, FiSend } from 'react-icons/fi';
 import { FaCode, FaLaptopCode, FaRocket } from 'react-icons/fa';
+import { RiNpmjsFill } from "react-icons/ri";
 
 const Hero: React.FC = () => {
   const socialLinks = [
     { icon: <FiGithub />, url: 'https://github.com/ramazanismayilov', label: 'GitHub' },
     { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/ramazan-ismayilov', label: 'LinkedIn' },
     { icon: <FiInstagram />, url: 'https://www.instagram.com/r.ismayilof', label: 'Instagram' },
+    { icon: <RiNpmjsFill />, url: 'https://www.npmjs.com/~ramazanismayilov', label: 'NPM' },
     { icon: <FiMail />, url: 'mailto:ramazanismayilovh@gmail.com', label: 'Email' },
   ];
 
