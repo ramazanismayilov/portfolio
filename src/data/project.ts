@@ -86,7 +86,7 @@ export const projectData: Project[] = [
         ],
         image: 'epic-games.svg',
         github: 'https://github.com/ramazanismayilov/epicGames-api',
-        demo: '',
+        demo: 'https://epic-games.ramazanismayilovh.me',
     },
     {
         id: 4,
@@ -141,7 +141,7 @@ export const projectData: Project[] = [
         ],
         image: 'challo.jpeg',
         github: 'https://github.com/ramazanismayilov/challo-api',
-        demo: '',
+        demo: 'https://challo-api.ramazanismayilovh.me',
     },
     {
         id: 6,
@@ -171,6 +171,6 @@ export const projectData: Project[] = [
         ],
         image: '166cargo.png',
         github: 'https://github.com/ramazanismayilov/166cargo-api',
-        demo: '',
+        demo: 'https://166cargo-api.ramazanismayilovh.me',
     }
 ];
