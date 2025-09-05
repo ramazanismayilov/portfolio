@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiMenu, FiX, FiDownload, FiSend } from 'react-icons/fi';
+import { FiMenu, FiX, FiSend } from 'react-icons/fi';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,19 +41,60 @@ const Header: React.FC = () => {
     setIsMenuOpen(false);
 
     if (href.startsWith('#')) {
-      const element = document.querySelector(href);
-      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const sectionId = href.substring(1);
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.offsetTop - headerHeight;
+
+          window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+          });
+        } else {
+          console.warn(`Element with id "${sectionId}" not found`);
+        }
+      }, 100);
     }
   };
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
-      <motion.header initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}
-        className={`fixed w-full top-0 z-50 transition-all duration-300 py-4 ${scrolled ? ' backdrop-blur-lg shadow-lg' : 'bg-transparent'}`}
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className={`fixed w-full top-0 z-50 transition-all duration-300 py-4 ${scrolled ? 'backdrop-blur-lg shadow-lg' : 'bg-transparent'
+          }`}
       >
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex justify-between items-center ">
-            <a href="#about" onClick={(e) => { e.preventDefault(); handleNavClick('#about') }}
+          <div className="flex justify-between items-center">
+            <button
+              onClick={() => handleNavClick('#about')}
               className="group relative"
             >
               <div className="text-3xl font-bold">
@@ -62,19 +103,15 @@ const Header: React.FC = () => {
                 </span>
               </div>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 group-hover:w-full transition-all duration-300"></div>
-            </a>
+            </button>
             <nav className="hidden lg:flex items-center space-x-1">
-              {navLinks.map((link, index) => (
-                <a
+              {navLinks.map((link) => (
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(link.href);
-                  }}
+                  onClick={() => handleNavClick(link.href)}
                   className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${activeSection === link.href
-                    ? 'text-green-600 bg-green-50'
-                    : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                      ? 'text-green-600 bg-green-50'
+                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                     }`}
                 >
                   {link.name}
@@ -84,17 +121,18 @@ const Header: React.FC = () => {
                       className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-green-500 to-green-600 rounded-full"
                     />
                   )}
-                </a>
+                </button>
               ))}
             </nav>
+
             <div className="hidden lg:flex items-center space-x-4">
-              <a
-                href="#contact"
+              <button
+                onClick={() => handleNavClick('#contact')}
                 className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
               >
                 <FiSend className="group-hover:animate-bounce" size={16} />
                 <span>Get in Touch</span>
-              </a>
+              </button>
             </div>
             <motion.button
               whileTap={{ scale: 0.9 }}
@@ -144,23 +182,19 @@ const Header: React.FC = () => {
                 className="px-6 py-6 space-y-2"
               >
                 {navLinks.map((link, index) => (
-                  <motion.a
+                  <motion.button
                     key={link.name}
-                    href={link.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(link.href);
-                    }}
+                    onClick={() => handleNavClick(link.href)}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${activeSection === link.href
-                      ? 'text-green-600 bg-green-50 border-l-4 border-green-500'
-                      : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
+                    className={`w-full text-left block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${activeSection === link.href
+                        ? 'text-green-600 bg-green-50 border-l-4 border-green-500'
+                        : 'text-gray-700 hover:text-green-600 hover:bg-green-50'
                       }`}
                   >
                     {link.name}
-                  </motion.a>
+                  </motion.button>
                 ))}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -168,15 +202,13 @@ const Header: React.FC = () => {
                   transition={{ delay: navLinks.length * 0.1 }}
                   className="pt-4"
                 >
-                  <a
-                    href="pdf/ramazan-ismayilov.pdf"
-                    download
+                  <button
+                    onClick={() => handleNavClick('#contact')}
                     className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg flex items-center justify-center gap-3 hover:from-green-600 hover:to-green-700 transition-all duration-300"
-                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <FiDownload size={18} />
+                    <FiSend size={18} />
                     Get in Touch
-                  </a>
+                  </button>
                 </motion.div>
               </motion.div>
             </motion.div>

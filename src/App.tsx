@@ -16,7 +16,7 @@ function App() {
       <CursorKit
         innerSize={9}
         innerColor="#22c55e"
-        innerBorderColor="#16a34a"
+        innerBorderWidth={0}
         outerSize={40}
         outerOpacity={0.5}
         outerBorderColor="#22c55e"
