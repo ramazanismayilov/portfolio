@@ -86,7 +86,7 @@ export const projectData: Project[] = [
         ],
         image: 'epic-games.svg',
         github: 'https://github.com/ramazanismayilov/epicGames-api',
-        demo: 'https://epic-games.ramazanismayilovh.me',
+        demo: 'https://epic-games-nestjs.vercel.app',
     },
     {
         id: 4,
