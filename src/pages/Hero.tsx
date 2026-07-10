@@ -1,16 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiDownload, FiSend } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiDownload, FiSend, FiBriefcase, FiMapPin, FiHome, FiArrowUpRight } from 'react-icons/fi';
 import { FaCode, FaLaptopCode, FaRocket } from 'react-icons/fa';
-import { RiNpmjsFill } from "react-icons/ri";
 
 const Hero: React.FC = () => {
-  const socialLinks = [
-    { icon: <FiGithub />, url: 'https://github.com/ramazanismayilov', label: 'GitHub' },
-    { icon: <FiLinkedin />, url: 'https://www.linkedin.com/in/ramazan-ismayilov', label: 'LinkedIn' },
-    { icon: <FiInstagram />, url: 'https://www.instagram.com/r.ismayilof', label: 'Instagram' },
-    { icon: <RiNpmjsFill />, url: 'https://www.npmjs.com/~ramazanismayilov', label: 'NPM' },
-    { icon: <FiMail />, url: 'mailto:ramazanismayilovh@gmail.com', label: 'Email' },
+  const contactLinks = [
+    { icon: <FiGithub />, label: 'GitHub', url: 'https://github.com/ramazanismayilov' },
+    { icon: <FiLinkedin />, label: 'LinkedIn', url: 'https://www.linkedin.com/in/ramazan-ismayilov' },
+    { icon: <FiMail />, label: 'Email', url: 'mailto:ramazanismayilovh@gmail.com' },
+  ];
+
+  const profileStats = [
+    { icon: <FiBriefcase />, label: 'Experience', value: '2+ Years' },
+    { icon: <FiHome />, label: 'Current Position', value: 'Middle Frontend Developer' },
+    { icon: <FiMapPin />, label: 'Location', value: 'Baku, Azerbaijan' },
   ];
 
   const floatingIcons = [
@@ -88,13 +91,19 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-sm sm:text-base lg:text-lg text-gray-600 mb-6 sm:mb-8 lg:mb-10 leading-relaxed max-w-2xl"
             >
-              I'm Ramazan. I have <span className='font-semibold'>over a year of experience</span> in programming as a
-              <span className="font-semibold text-green-600"> Software Developer</span>, experienced in both
-              frontend (React, Angular) and backend (Node.js, Express.js, NestJS) technologies.
-              Currently pursuing a degree in <span className="font-semibold text-green-600">Computer Science</span>,
-              I've contributed to various team projects and startup initiatives, gaining valuable experience in creating user-focused products and effective collaboration.
-              My goal is to innovate, grow as a developer, and make meaningful contributions in the tech industry.
-              I am eager to learn, quick to adapt to new technologies, and an active team player focused on creating innovative solutions.
+              I'm Ramazan, a <span className="font-semibold text-green-600">Full-Stack Developer</span> with
+              <span className="font-semibold"> over 2 years of experience</span>, specializing in
+              <span className="font-semibold text-green-600"> Angular, React, and Node.js (Express.js, NestJS)</span>.
+              I have developed enterprise ERP systems and worked on projects involving
+              multi-role architectures, payment integrations, and
+              <span className="font-semibold"> SİMA token-based authentication with secure document signing</span>.
+              Beyond my professional experience, I am passionate about hackathons and programming competitions.
+              I was a <span className="font-semibold text-green-600">WorldSkills Web Technologies finalist</span>,
+              ranking <span className="font-semibold">5th among 130 participants</span>.
+              I enjoy learning new technologies, solving complex problems, and building efficient,
+              scalable, and user-friendly applications.
+              I thrive in collaborative environments where I can share knowledge, contribute to innovative
+              projects, and continuously grow as a software developer.
             </motion.p>
 
             <motion.div
@@ -105,7 +114,7 @@ const Hero: React.FC = () => {
             >
               <a
                 download
-                href="pdf/ramazan-ismayilov.pdf"
+                href="pdf/ramazan-ismayılov.pdf"
                 className="group bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base"
               >
                 <FiDownload className="group-hover:animate-bounce text-sm sm:text-base" />
@@ -119,80 +128,82 @@ const Hero: React.FC = () => {
                 Contact Me
               </a>
             </motion.div>
-
-            <motion.div className="flex gap-3 sm:gap-4 justify-center lg:justify-start">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  className="group w-10 h-10 sm:w-12 sm:h-12 bg-white hover:bg-green-500 border border-gray-200 hover:border-green-500 rounded-full flex items-center justify-center text-gray-600 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <span className="text-sm sm:text-lg group-hover:animate-bounce transition-transform duration-300">
-                    {social.icon}
-                  </span>
-                </a>
-              ))}
-            </motion.div>
           </motion.div>
+
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <div className="relative">
+            <div className="relative w-full max-w-sm">
               <motion.div
                 animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-1.5 sm:-inset-2 md:-inset-3 lg:-inset-4 border-2 border-dashed border-green-300/50 rounded-full"
+                transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                className="absolute -inset-3 border border-dashed border-green-300/40 rounded-3xl pointer-events-none"
               />
-              <motion.div
-                animate={{ rotate: -360 }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-3 sm:-inset-4 md:-inset-6 lg:-inset-8 border border-dotted border-green-400/30 rounded-full"
-              />
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="relative w-32 h-32 xs:w-40 xs:h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden shadow-2xl border-3 sm:border-4 lg:border-6 xl:border-8 border-white"
-              >
-                <div className="absolute inset-0 bg-gradient-to-tr from-green-400/20 to-transparent"></div>
-                <img
-                  src="/img/profile.png"
-                  alt="Ramazan Ismayilov - Full Stack Developer"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-green-500/10 via-transparent to-green-600/10"></div>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -top-2 -right-3 sm:-top-3 sm:-right-4 md:-top-4 md:-right-6 lg:-top-6 lg:-right-8 bg-white border border-green-200 px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 rounded-full shadow-lg"
-              >
-                <span className="text-xs sm:text-xs md:text-sm font-semibold text-green-600">Angular</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity }}
-                className="absolute bottom-2 -right-4 sm:bottom-3 sm:-right-6 md:bottom-4 md:-right-8 lg:bottom-6 lg:-right-10 bg-white border border-green-200 px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 rounded-full shadow-lg"
-              >
-                <span className="text-xs sm:text-xs md:text-sm font-semibold text-green-600">React</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -top-3 -left-2 sm:-top-4 sm:-left-3 md:-top-6 md:-left-4 lg:-top-8 lg:-left-6 bg-white border border-green-200 px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 rounded-full shadow-lg"
-              >
-                <span className="text-xs sm:text-xs md:text-sm font-semibold text-green-600">Node.js</span>
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -bottom-3 -left-4 sm:-bottom-4 sm:-left-6 md:-bottom-6 md:-left-8 lg:-bottom-8 lg:-left-10 bg-white border border-green-200 px-1.5 py-0.5 sm:px-2 sm:py-1 md:px-3 md:py-1.5 lg:px-4 lg:py-2 rounded-full shadow-lg"
-              >
-                <span className="text-xs sm:text-xs md:text-sm font-semibold text-green-600">NestJS</span>
-              </motion.div>
+
+              <div className="relative bg-white/90 backdrop-blur-sm border border-green-100 rounded-2xl shadow-2xl overflow-hidden">
+                <div className="bg-gradient-to-r from-green-500 to-green-600 px-6 py-5 sm:px-7 sm:py-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center text-white text-lg font-bold">
+                      RI
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold text-sm sm:text-base leading-tight">Ramazan Ismayilov</p>
+                      <p className="text-green-50/90 text-xs sm:text-sm">Developer Profile</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="px-6 py-5 sm:px-7 sm:py-6 space-y-4 sm:space-y-5">
+                  {profileStats.map((stat, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
+                      className="flex items-start gap-3"
+                    >
+                      <span className="mt-0.5 w-8 h-8 sm:w-9 sm:h-9 flex-shrink-0 rounded-lg bg-green-50 text-green-600 flex items-center justify-center text-sm sm:text-base">
+                        {stat.icon}
+                      </span>
+                      <div>
+                        <p className="text-[11px] sm:text-xs uppercase tracking-wide text-gray-400 font-medium">
+                          {stat.label}
+                        </p>
+                        <p className="text-sm sm:text-base font-semibold text-gray-800">
+                          {stat.value}
+                        </p>
+                      </div>
+                    </motion.div>
+                  ))}
+
+                  <div className="pt-3 sm:pt-4 border-t border-gray-100">
+                    <p className="text-[11px] sm:text-xs uppercase tracking-wide text-gray-400 font-medium mb-2 sm:mb-3">
+                      Contact
+                    </p>
+                    <div className="space-y-2">
+                      {contactLinks.map((link, index) => (
+                        <a
+                          key={index}
+                          href={link.url}
+                          target="_blank"
+                          className="group flex items-center justify-between px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-lg bg-gray-50 hover:bg-green-50 transition-colors duration-300"
+                        >
+                          <span className="flex items-center gap-2.5 text-sm sm:text-base text-gray-700 group-hover:text-green-600 font-medium">
+                            <span className="text-gray-400 group-hover:text-green-600 transition-colors duration-300">
+                              {link.icon}
+                            </span>
+                            {link.label}
+                          </span>
+                          <FiArrowUpRight className="text-gray-300 group-hover:text-green-500 transition-colors duration-300" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

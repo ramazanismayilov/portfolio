@@ -1,46 +1,56 @@
 export const experienceData = [
     {
         id: 1,
-        role: 'Frontend (Angular) Developer',
+        role: 'Middle Frontend Developer',
         company: 'Uniser Group MMC',
         location: 'Baku, Azerbaijan',
-        duration: '12/2024 to present',
-        type: "Part-time",
+        duration: '06/2026 to Present',
+        type: 'Full-time',
         description: [
-            'Multi-role user management system',
-            'Secure login and document signing with SİMA e-signature',
-            'Integration with online payment services',
-            'Management dashboard, reports, and data visualizations',
-            'API communication between frontend and backend'
-        ],
-        technologies: ["Angular", "RxJs", "TypeScript", "Html", "Css", "Bootstrap", "Tailwind css", "ExcelJs", "XLSX"],
+            'Developed and maintained enterprise ERP systems',
+            'Designed scalable and reusable UI components for large-scale applications',
+            'Integrated SİMA electronic signature and online payment systems',
+            'Built multilingual applications with dynamic language switching',
+            'Developed administrative dashboards, reports, and analytical data visualizations',
+            'Optimized application performance through RESTful API integration',
+            'Collaborated with backend developers, QA engineers, and business analysts',
+            'Provided technical support and maintained existing enterprise applications'
+        ]
     },
     {
         id: 2,
-        role: 'Frontend (React) Developer',
-        company: 'Smart Business LLC',
+        role: 'Junior Frontend Developer',
+        company: 'Uniser Group MMC',
         location: 'Baku, Azerbaijan',
-        duration: '04/2024 to 08/2024',
-        type: "Part-time",
+        duration: '12/2024 to 06/2026',
+        type: 'Full-time',
         description: [
-            'Developed POS and inventory management system for retail and restaurants',
-            'Built responsive frontend with React.js',
-            'Collaborated with backend team to deliver a complete solution'
-        ],
-        technologies: ["React", "TypeScript", "Html", "Css", "Bootstrap"],
+            'Developed responsive web applications',
+            'Implemented UI components based on Figma designs',
+            'Consumed REST APIs and integrated frontend with backend services',
+            'Fixed bugs and improved application usability and performance',
+            'Worked with Git for version control and team collaboration',
+            'Optimized application performance through RESTful API integration',
+            'Collaborated with backend developers, QA engineers, and business analysts',
+            'Provided technical support and maintained existing enterprise applications'
+        ]
     },
     {
         id: 3,
-        role: 'Frontend (Angular) Developer(intern)',
-        company: 'Invawe',
+        role: 'Junior Frontend (React) Developer',
+        company: 'Smart Business LLC',
         location: 'Baku, Azerbaijan',
-        duration: '07/2024 to 09/2024',
-        type: "Remote",
+        duration: '03/2024 to 08/2024',
+        type: 'Full-time',
         description: [
-            'Developed an internal company platform to improve communication and teamwork using Angular',
-            'Enhanced internal workflows and productivity by building user-friendly features',
-            'Worked closely with backend and design teams to ensure scalability and seamless user experience'
-        ],
-        technologies: ["Angular", "RxJs", "TypeScript", "Html", "Css", "Bootstrap"]
-    },
+            'Developed POS and warehouse management systems',
+            'Designed and implemented responsive user interfaces for desktop and mobile devices',
+            'Built administrative and analytical dashboards for business operations',
+            'Integrated frontend applications with RESTful APIs and optimized data handling',
+            'Collaborated with backend developers to implement new features and resolve issues',
+            'Participated in the full software development lifecycle, including analysis, development, testing, and maintenance',
+            'Maintained clean, reusable, and scalable code following best practices',
+            'Worked with Git for version control and team collaboration'
+        ]
+    }
 ];

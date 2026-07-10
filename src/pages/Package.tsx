@@ -8,7 +8,7 @@ const Package = () => {
       name: "@ri-dev/react-cursor-kit",
       description:
         "A customizable React cursor component with smooth animations and interactive hover effects to enhance user experience",
-      downloads: "350+",
+      downloads: "500+",
       version: "1.0.0",
       category: "Custom cursor",
       link: "https://www.npmjs.com/package/@ri-dev/react-cursor-kit",
@@ -60,7 +60,7 @@ const Package = () => {
           animate="visible"
         >
           {[
-            { label: "Total Downloads", value: "350+", icon: FiDownload },
+            { label: "Total Downloads", value: "500+", icon: FiDownload },
             { label: "Active Packages", value: "1", icon: FiPackage },
           ].map((stat, index) => (
             <motion.div

@@ -73,24 +73,6 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ exp, index }) => {
                             ))}
                         </ul>
                     </div>
-                    <div>
-                        <h4 className="font-semibold text-gray-900 mb-3">Technologies Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                            {exp.technologies.map((tech, i) => (
-                                <motion.span
-                                    key={i}
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.05 }}
-                                    className="bg-gray-100 hover:bg-green-100 text-gray-700 hover:text-green-700 px-3 py-1 rounded-lg text-sm font-medium transition-colors cursor-default"
-                                    whileHover={{ scale: 1.05 }}
-                                >
-                                    {tech}
-                                </motion.span>
-                            ))}
-                        </div>
-                    </div>
                     <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-20"></div>
                 </motion.div>
             </div>
