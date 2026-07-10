@@ -37,7 +37,7 @@ export const experienceData = [
     },
     {
         id: 3,
-        role: 'Junior Frontend (React) Developer',
+        role: 'Junior Frontend Developer',
         company: 'Smart Business LLC',
         location: 'Baku, Azerbaijan',
         duration: '03/2024 to 08/2024',
